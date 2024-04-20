@@ -7,7 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class PlayerHealth : MonoBehaviour
 {
     public int playerCurrentHealth = 10;
-    public GameObject healthBarText, currentGame, gameOverScreen, timeGO, healthGO;
+    public GameObject healthBarText, currentGame, gameOverScreen, timeGO, healthGO, fallGO;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,18 +17,18 @@ public class PlayerHealth : MonoBehaviour
         }
         healthBarText.GetComponent<TMP_Text>().text = playerCurrentHealth.ToString();
 
-        if (playerCurrentHealth < 1)
+        if (playerCurrentHealth < 3)
         {
             currentGame.SetActive(false);
             gameOverScreen.SetActive(true);
             timeGO.SetActive(false);
             healthGO.SetActive(true);
-
+            fallGO.SetActive(false);
         }
 
         if (other.tag == "EnemyAttack")
         {
-            playerCurrentHealth -= 2;
+            playerCurrentHealth -= 4;
         }
         healthBarText.GetComponent<TMP_Text>().text = playerCurrentHealth.ToString();
 

@@ -6,7 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class Timer : MonoBehaviour
 {
-    public GameObject timeText, inGame, postGame, gameOverTimer, gameOverHealth;
+    public GameObject timeText, inGame, postGame, gameOverTimer, gameOverHealth, fallOG;
     public float timeRemain = 30;
     float timer = 0;
     bool timerRunning = true;
@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour
             postGame.SetActive(true);
             gameOverTimer.SetActive(true);
             gameOverHealth.SetActive(false);
+            fallOG.SetActive(false);
         }
         timeText.GetComponent<TMP_Text>().text = timer.ToString();
     }
