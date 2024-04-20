@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NewGame
   - QuitDesktop
+  - BadGuy
   layers:
   - Default
   - TransparentFX
