@@ -8,6 +8,7 @@ TagManager:
   - QuitDesktop
   - BadGuy
   - EnemyAttack
+  - EndOfLevel
   layers:
   - Default
   - TransparentFX

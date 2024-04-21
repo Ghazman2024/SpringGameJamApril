@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.tag == "BadGuy")
         {
-            playerCurrentHealth -= 1;
+            playerCurrentHealth -= 2;
         }
         healthBarText.GetComponent<TMP_Text>().text = playerCurrentHealth.ToString();
 
@@ -31,6 +31,5 @@ public class PlayerHealth : MonoBehaviour
             playerCurrentHealth -= 4;
         }
         healthBarText.GetComponent<TMP_Text>().text = playerCurrentHealth.ToString();
-
     }
 }
