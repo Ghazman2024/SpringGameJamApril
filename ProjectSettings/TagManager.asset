@@ -9,6 +9,7 @@ TagManager:
   - BadGuy
   - EnemyAttack
   - EndOfLevel
+  - Credits
   layers:
   - Default
   - TransparentFX
